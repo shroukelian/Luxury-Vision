@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 80px;
     margin-bottom: 1.5rem;
     filter: brightness(0) invert(1); /* جعل الشعار أبيض ليظهر على الخلفية الداكنة */
 }
@@ -367,7 +367,70 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid #444;
 }
 
+/* ======================= Responsive Cart Page (Mobile View) ======================= */
+@media (max-width: 768px) {
+    /* إخفاء رأس الجدول الأصلي لأنه لم يعد مفيدًا */
+    .cart-items thead {
+        display: none;
+    }
 
+    /* تحويل الجدول والصفوف إلى كتل عمودية */
+    .cart-items table, 
+    .cart-items tbody, 
+    .cart-items tr, 
+    .cart-items td {
+        display: block;
+        width: 100%;
+    }
+
+    /* تحويل كل صف إلى بطاقة منفصلة وجميلة */
+    .cart-items tr {
+        border: 1px solid #eee;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* إزالة الحدود الداخلية بين الخلايا */
+    .cart-items td {
+        border: none;
+        padding: 0.5rem 0;
+        display: flex; /* <<-- استخدام flex لتنسيق العنوان مع القيمة */
+        justify-content: space-between; /* <<-- وضع العنوان على اليمين والقيمة على اليسار */
+        align-items: center;
+        text-align: left; /* <<-- جعل النص على اليسار */
+    }
+
+    /* الجزء السحري: إضافة العناوين قبل كل قيمة */
+    .cart-items td::before {
+        content: attr(data-label); /* <<-- جلب النص من data-label */
+        font-weight: 700;
+        color: var(--secondary-color);
+        text-align: right; /* <<-- جعل العنوان على اليمين */
+        padding-left: 1rem;
+    }
+
+    /* تنسيقات خاصة لخلايا معينة */
+    .product-image-cell {
+        justify-content: center; /* توسيط الصورة */
+        margin-bottom: 1rem;
+    }
+    
+    /* جعل اسم المنتج وزر الإزالة تحت بعضهما */
+    .product-name-cell {
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+    }
+    .product-name-cell::before {
+        display: none; /* لا نحتاج عنوان لكلمة "المنتج" */
+    }
+    
+    .quantity-selector-cart {
+        margin: 0; /* إزالة أي هوامش قديمة */
+    }
+}
 /* ======================= Scroll Animation (ENHANCED) ======================= */
 
 /* الحالة الافتراضية للعنصر (قبل أن يظهر في الشاشة) */

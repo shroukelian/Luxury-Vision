@@ -36,7 +36,7 @@
                     <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
                     <a href="cart.html" class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span> <!-- رقم افتراضي كمثال -->
+                        <span class="cart-count">3</span> 
                     </a>
                     <div class="menu-icon">
                         <i class="fas fa-bars"></i>
@@ -50,13 +50,11 @@
     <main>
         <section class="section-padding">
             <div class="container">
-                <!-- Page Header -->
                 <div class="page-header">
                     <h1>سلة المشتريات</h1>
                 </div>
 
                 <div class="cart-layout">
-                    <!-- Cart Items Table -->
                     <div class="cart-items">
                         <table>
                             <thead>
@@ -68,49 +66,50 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Cart Item 1 -->
-                                <tr>
-                                    <td class="product-image-cell">
-                                        <img src="https://images.unsplash.com/photo-1594454823103-382a39205f93?q=80&w=1974&auto-format=fit=crop" alt="سرير مودرن">
-                                    </td>
-                                    <td class="product-name-cell">
-                                        <a href="product-details.html">سرير مودرن مع تخزين</a>
-                                        <button class="remove-item">إزالة</button>
-                                    </td>
-                                    <td>4,100 ريال</td>
-                                    <td>
-                                        <div class="quantity-selector-cart">
-                                            <button class="quantity-btn">-</button>
-                                            <input type="text" value="1" class="quantity-input">
-                                            <button class="quantity-btn">+</button>
-                                        </div>
-                                    </td>
-                                    <td>4,100 ريال</td>
-                                </tr>
-                                <!-- Cart Item 2 -->
-                                <tr>
-                                    <td class="product-image-cell">
-                                        <img src="https://images.unsplash.com/photo-1598701258731-3c52site.com/photo-1598701258731-3c525141f2a3?q=80&w=2070&auto=format&fit=crop" alt="تسريحة عصرية">
-                                    </td>
-                                    <td class="product-name-cell">
-                                        <a href="product-details.html">تسريحة عصرية بمرآة LED</a>
-                                        <button class="remove-item">إزالة</button>
-                                    </td>
-                                    <td>1,800 ريال</td>
-                                    <td>
-                                        <div class="quantity-selector-cart">
-                                            <button class="quantity-btn">-</button>
-                                            <input type="text" value="2" class="quantity-input">
-                                            <button class="quantity-btn">+</button>
-                                        </div>
-                                    </td>
-                                    <td>3,600 ريال</td>
-                                </tr>
+                                <!-- ... inside tbody ... -->
+<!-- Cart Item 1 -->
+<tr>
+    <td class="product-image-cell">
+        <img src="https://images.unsplash.com/photo-1594454823103-382a39205f93?q=80&w=1974&auto=format&fit=crop" alt="سرير مودرن">
+    </td>
+    <td class="product-name-cell" data-label="المنتج"> <!-- <<-- أضفنا هنا -->
+        <a href="product-details.html">سرير مودرن مع تخزين</a>
+        <button class="remove-item">إزالة</button>
+    </td>
+    <td data-label="السعر">4,100 ريال</td> <!-- <<-- وهنا -->
+    <td data-label="الكمية"> <!-- <<-- وهنا -->
+        <div class="quantity-selector-cart">
+            <button class="quantity-btn">-</button>
+            <input type="text" value="1" class="quantity-input">
+            <button class="quantity-btn">+</button>
+        </div>
+    </td>
+    <td data-label="الإجمالي">4,100 ريال</td> <!-- <<-- وهنا -->
+</tr>
+<!-- Cart Item 2 -->
+<tr>
+    <td class="product-image-cell">
+        <img src="https://images.unsplash.com/photo-1598701258731-3c525141f2a3?q=80&w=2070&auto=format&fit=crop" alt="تسريحة عصرية">
+    </td>
+    <td class="product-name-cell" data-label="المنتج"> <!-- <<-- أضفنا هنا -->
+        <a href="product-details.html">تسريحة عصرية بمرآة LED</a>
+        <button class="remove-item">إزالة</button>
+    </td>
+    <td data-label="السعر">1,800 ريال</td> <!-- <<-- وهنا -->
+    <td data-label="الكمية"> <!-- <<-- وهنا -->
+        <div class="quantity-selector-cart">
+            <button class="quantity-btn">-</button>
+            <input type="text" value="2" class="quantity-input">
+            <button class="quantity-btn">+</button>
+        </div>
+    </td>
+    <td data-label="الإجمالي">3,600 ريال</td> <!-- <<-- وهنا -->
+</tr>
+<!-- ... etc -->
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- Order Summary -->
                     <div class="order-summary">
                         <h4>ملخص الطلب</h4>
                         <div class="summary-row">
@@ -132,16 +131,54 @@
         </section>
     </main>
 
-    <!-- ======================= Footer ======================= -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 رؤية الفخامة. جميع الحقوق محفوظة.</p>
+   
+ <!-- ======================= Footer (NEW DESIGN) ======================= -->
+<footer id="contact" class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logo.png" alt="Luxury Vision Logo" class="footer-logo">
+                </a>
+                <p class="footer-about">نصنع الأثاث بشغف، ونقدم حلولًا مبتكرة تلبي تطلعاتكم وتناسب مساحاتكم. رؤية الفخامة، حيث يلتقي الفن بالجودة.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                 <ul>
+                    <li><a href="#index.html">الرئيسية</a></li>
+                    <li><a href="#about">عن الشركه</a></li>
+                    <li><a href="#catalog">الأقسام</a></li>
+                    <li><a href="shop.html">المنتجات</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>الرياض، المملكة العربية السعودية</span></li>
+                    <li><i class="fas fa-phone-alt"></i><span>+966 11 234 5678</span></li>
+                    <li><i class="fas fa-envelope"></i><span>info@luxuryvision.sa</span></li>
+                </ul>
+            </div>
+            
+             <div class="footer-col">
+                <h4>تابعنا</h4>
+                 <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2024 لـ رؤية الفخامة</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Your JS File -->
     <script src="js/main.js"></script>
 
 </body>
