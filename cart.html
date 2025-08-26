@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات - Luxury Vision</title>
+
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Your CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======================= Header & Navbar ======================= -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Luxury Vision Logo">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html">المتجر</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span> <!-- رقم افتراضي كمثال -->
+                    </a>
+                    <div class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================= Main Content for Cart Page ======================= -->
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1>سلة المشتريات</h1>
+                </div>
+
+                <div class="cart-layout">
+                    <!-- Cart Items Table -->
+                    <div class="cart-items">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">المنتج</th>
+                                    <th>السعر</th>
+                                    <th>الكمية</th>
+                                    <th>الإجمالي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Cart Item 1 -->
+                                <tr>
+                                    <td class="product-image-cell">
+                                        <img src="https://images.unsplash.com/photo-1594454823103-382a39205f93?q=80&w=1974&auto-format=fit=crop" alt="سرير مودرن">
+                                    </td>
+                                    <td class="product-name-cell">
+                                        <a href="product-details.html">سرير مودرن مع تخزين</a>
+                                        <button class="remove-item">إزالة</button>
+                                    </td>
+                                    <td>4,100 ريال</td>
+                                    <td>
+                                        <div class="quantity-selector-cart">
+                                            <button class="quantity-btn">-</button>
+                                            <input type="text" value="1" class="quantity-input">
+                                            <button class="quantity-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td>4,100 ريال</td>
+                                </tr>
+                                <!-- Cart Item 2 -->
+                                <tr>
+                                    <td class="product-image-cell">
+                                        <img src="https://images.unsplash.com/photo-1598701258731-3c52site.com/photo-1598701258731-3c525141f2a3?q=80&w=2070&auto=format&fit=crop" alt="تسريحة عصرية">
+                                    </td>
+                                    <td class="product-name-cell">
+                                        <a href="product-details.html">تسريحة عصرية بمرآة LED</a>
+                                        <button class="remove-item">إزالة</button>
+                                    </td>
+                                    <td>1,800 ريال</td>
+                                    <td>
+                                        <div class="quantity-selector-cart">
+                                            <button class="quantity-btn">-</button>
+                                            <input type="text" value="2" class="quantity-input">
+                                            <button class="quantity-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td>3,600 ريال</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h4>ملخص الطلب</h4>
+                        <div class="summary-row">
+                            <span>المجموع الفرعي</span>
+                            <span>7,700 ريال</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>الشحن</span>
+                            <span>مجاني</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>الإجمالي</span>
+                            <span>7,700 ريال</span>
+                        </div>
+                        <a href="checkout.html" class="btn btn-primary full-width">الانتقال لإتمام الدفع</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 رؤية الفخامة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Your JS File -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

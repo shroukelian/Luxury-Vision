@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات - Luxury Vision</title>
+
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Your CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======================= Header & Navbar ======================= -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Luxury Vision Logo">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html">المتجر</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span> <!-- رقم افتراضي كمثال -->
+                    </a>
+                    <div class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================= Main Content for Cart Page ======================= -->
+    <main>
+       <section class.section-padding">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>إتمام الدفع</h1>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Billing Details Form -->
+                <div class="billing-details">
+                    <h3>تفاصيل الفاتورة</h3>
+                    <form class="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">الاسم الأول</label>
+                                <input type="text" id="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">الاسم الأخير</label>
+                                <input type="text" id="lastname" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">العنوان</label>
+                            <input type="text" id="address" placeholder="اسم الشارع، رقم المبنى" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">المدينة</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">رقم الجوال</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary-checkout">
+                    <h4>طلبك</h4>
+                    <div class="summary-product-list">
+                        <!-- Product 1 -->
+                        <div class="summary-product">
+                            <span>سرير مودرن مع تخزين × 1</span>
+                            <span>4,100 ريال</span>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="summary-product">
+                            <span>تسريحة عصرية × 2</span>
+                            <span>3,600 ريال</span>
+                        </div>
+                    </div>
+                    <div class="summary-row">
+                        <span>المجموع الفرعي</span>
+                        <span>7,700 ريال</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>الشحن</span>
+                        <span>مجاني</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>الإجمالي</span>
+                        <span>7,700 ريال</span>
+                    </div>
+
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="mada" name="payment" checked>
+                            <label for="mada">مدى / بطاقة ائتمانية</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="applepay" name="payment">
+                            <label for="applepay">Apple Pay</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="bank" name="payment">
+                            <label for="bank">تحويل بنكي</label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary full-width">تأكيد الطلب</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 رؤية الفخامة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Your JS File -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
