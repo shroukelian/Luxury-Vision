@@ -198,15 +198,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* <<-- إضافة ظل واضح عند التكبير */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
 }
 .category-card {
-    /* ... (تأكد من وجود transition هنا) ... */
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     display: block;
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* <<-- أضف box-shadow للـ transition */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
     height: 350px;
 }
 
@@ -248,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 1rem;
-    background-color: #e9e2d9; /* لون خلفية للصور */
+    background-color: #e9e2d9; 
 }
 
 .product-image img {
@@ -277,10 +276,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ======================= Footer (NEW DESIGN) ======================= */
 .footer {
-    background-color: #2c2c2c; /* لون داكن كما في المثال */
+    background-color: #2c2c2c; 
     color: #a0a0a0;
     padding: 5rem 0 0;
-    margin-top: 4rem; /* فصل الفوتر عن المحتوى الذي فوقه */
+    margin-top: 4rem; 
 }
 
 .footer-grid {
@@ -300,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-logo {
     height: 80px;
     margin-bottom: 1.5rem;
-    filter: brightness(0) invert(1); /* جعل الشعار أبيض ليظهر على الخلفية الداكنة */
+    filter: brightness(0) invert(1); 
 }
 
 .footer-about {
@@ -378,40 +377,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .credits a {
-    color: var(--surface-color); /* لون أفتح لاسم الشركة */
+    color: var(--surface-color); 
     font-weight: 700;
     transition: color 0.3s;
 }
 
 .credits a:hover {
-    color: var(--primary-color); /* تغيير اللون عند المرور */
+    color: var(--primary-color); 
 }
 
-/* ======================= Scroll Animation (ENHANCED) ======================= */
+/* ======================= Scroll Animation ======================= */
 
-/* الحالة الافتراضية للعنصر (قبل أن يظهر في الشاشة) */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* الحالة التي سيتم إضافتها بواسطة JavaScript (عندما يظهر العنصر في الشاشة) */
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* تأثير متدرج للبطاقات داخل الشبكات */
 .animate-on-scroll.is-visible .category-card,
 .animate-on-scroll.is-visible .step-card,
 .animate-on-scroll.is-visible .product-card {
-    /* تطبيق الأنيميشن على كل بطاقة على حدة */
     animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0; /* تبدأ البطاقات مخفية */
+    opacity: 0; 
 }
 
-/* تأخير ظهور كل بطاقة عن التي قبلها */
 .animate-on-scroll.is-visible .category-card:nth-child(1),
 .animate-on-scroll.is-visible .step-card:nth-child(1),
 .animate-on-scroll.is-visible .product-card:nth-child(1) { animation-delay: 0.1s; }
@@ -428,12 +422,10 @@ h1, h2, h3, h4, h5, h6 {
 .animate-on-scroll.is-visible .step-card:nth-child(4),
 .animate-on-scroll.is-visible .product-card:nth-child(4) { animation-delay: 0.4s; }
 
-/* يمكن إضافة المزيد من التأخيرات إذا كان هناك أكثر من 4 بطاقات */
 .animate-on-scroll.is-visible .product-card:nth-child(5) { animation-delay: 0.5s; }
 .animate-on-scroll.is-visible .product-card:nth-child(6) { animation-delay: 0.6s; }
 
 
-/* تعريف الأنيميشن نفسه */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -444,29 +436,26 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(0);
     }
 }
-/* ======================= Enhanced Hover Effects ======================= */
+/* =======================  Hover Effects ======================= */
 
-/* تأثير ظل ناعم لبطاقات المنتجات عند المرور */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.product-card { /* إضافة transition للبطاقة نفسها */
+.product-card { 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* تأثير تكبير (scale) لبطاقات "كيف نعمل" */
 .step-card:hover {
-    transform: scale(1.05); /* <<-- سيقوم بتكبير البطاقة بنسبة 5% */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* <<-- زيادة وضوح الظل */
-    background-color: var(--surface-color); /* <<-- إضافة خلفية بيضاء عند المرور */
+    transform: scale(1.05); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+    background-color: var(--surface-color); 
     border-radius: 15px;
 }
 .step-card {
-    /* إضافة transition لكل الخصائص لضمان حركة ناعمة */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    border-radius: 15px; /* جعل الحواف دائرية دائمًا */
+    border-radius: 15px; 
 }
 
 
@@ -503,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 10px;
-    display: inline-block; /* لجعل الخط السفلي بعرض النص فقط */
+    display: inline-block; 
 }
 .section-title-left::after {
     content: '';
@@ -537,7 +526,7 @@ h1, h2, h3, h4, h5, h6 {
 .features-list i {
     color: var(--primary-color);
     font-size: 1.2rem;
-    margin-top: 5px; /* لضبط المحاذاة مع النص */
+    margin-top: 5px;
 }
 
 /* Responsive for About Us section */
@@ -547,19 +536,19 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
     .section-title-left {
-        display: block; /* ليتوسط في الموبايل */
+        display: block; 
     }
     .section-title-left::after {
         left: 50%;
         transform: translateX(-50%);
     }
     .features-list li {
-        text-align: right; /* لجعل النص يبدأ من اليمين في الموبايل */
+        text-align: right; 
     }
 }
 /* ======================= Shop Page Specific Styles ======================= */
 .page-header {
-    background-color: #e9e2d9; /* لون فاتح متناسق */
+    background-color: #e9e2d9;
     padding: 3rem 0;
     text-align: center;
 }
@@ -576,7 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .shop-layout {
     display: grid;
-    grid-template-columns: 250px 1fr; /* عمود ضيق للفلاتر وعمود واسع للمنتجات */
+    grid-template-columns: 250px 1fr; 
     gap: 2rem;
 }
 
@@ -584,7 +573,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 10px;
-    height: fit-content; /* ليأخذ ارتفاع المحتوى فقط */
+    height: fit-content; 
 }
 
 .shop-filters h4 {
@@ -646,7 +635,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive for Shop Page */
 @media (max-width: 992px) {
     .shop-layout {
-        grid-template-columns: 1fr; /* تحويل التخطيط إلى عمود واحد في الشاشات الصغيرة */
+        grid-template-columns: 1fr; 
     }
     .shop-filters {
         margin-bottom: 2rem;
@@ -669,8 +658,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Main Product Card */
 .product-card-main {
     display: flex;
-    flex-wrap: wrap; /* للسماح بالانتقال لأسفل في الشاشات الصغيرة */
-    gap: 2rem;
+    flex-wrap: wrap; 
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 20px;
@@ -679,7 +667,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-image-col {
-    flex: 1 1 400px; /* ينمو، يتقلص، والعرض الأساسي 400px */
+    flex: 1 1 400px; 
     min-width: 300px;
 }
 .product-image-col img {
@@ -688,7 +676,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-info-col {
-    flex: 1 1 500px; /* العمود الثاني يأخذ مساحة أكبر قليلاً */
+    flex: 1 1 500px; 
     min-width: 300px;
 }
 
@@ -776,8 +764,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 5px 30px rgba(0,0,0,0.07);
-    max-width: 900px; /* تحديد عرض أقصى للبطاقة */
-    margin: 0 auto; /* توسيط البطاقة */
+    max-width: 900px; 
+    margin: 0 auto; 
 }
 
 .contact-info-top {
@@ -852,13 +840,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive for Contact Form */
 @media (max-width: 768px) {
     .contact-form .form-row {
-        grid-template-columns: 1fr; /* حقل واحد في كل سطر في الموبايل */
+        grid-template-columns: 1fr; 
     }
 }
 /* ======================= Cart Page Styles ======================= */
 .cart-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* قسم المنتجات يأخذ ضعف مساحة الملخص */
+    grid-template-columns: 2fr 1fr; 
     gap: 2rem;
     align-items: flex-start;
 }
@@ -953,13 +941,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive for Cart Page */
 @media (max-width: 992px) {
     .cart-layout {
-        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+        grid-template-columns: 1fr; 
     }
 }
 /* ======================= Checkout Page Styles ======================= */
 .checkout-layout {
     display: grid;
-    grid-template-columns: 1.5fr 1fr; /* الفورم يأخذ مساحة أكبر */
+    grid-template-columns: 1.5fr 1fr;
     gap: 2.5rem;
     align-items: flex-start;
 }
@@ -1036,14 +1024,14 @@ h1, h2, h3, h4, h5, h6 {
 .step-card {
     padding: 2rem;
     position: relative;
-    z-index: 1; /* للتأكد من أن المحتوى فوق الرقم */
+    z-index: 1;
 }
 
 .step-number {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 4rem; /* تكبير الرقم قليلاً */
+    font-size: 4rem;
     font-weight: 900;
     color: #eee;
     z-index: -1;
@@ -1077,7 +1065,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive for Checkout Page */
 @media (max-width: 992px) {
     .checkout-layout {
-        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+        grid-template-columns: 1fr; 
     }
 }
 @media (max-width: 768px) {
@@ -1109,12 +1097,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* ======================= Responsive Cart Page (Mobile View) ======================= */
 @media (max-width: 768px) {
-    /* إخفاء رأس الجدول الأصلي لأنه لم يعد مفيدًا */
     .cart-items thead {
         display: none;
     }
 
-    /* تحويل الجدول والصفوف إلى كتل عمودية */
     .cart-items table, 
     .cart-items tbody, 
     .cart-items tr, 
@@ -1123,7 +1109,6 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 
-    /* تحويل كل صف إلى بطاقة منفصلة وجميلة */
     .cart-items tr {
         border: 1px solid #eee;
         border-radius: 15px;
@@ -1131,32 +1116,28 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1rem;
     }
 
-    /* إزالة الحدود الداخلية بين الخلايا */
     .cart-items td {
         border: none;
         padding: 0.5rem 0;
-        display: flex; /* <<-- استخدام flex لتنسيق العنوان مع القيمة */
-        justify-content: space-between; /* <<-- وضع العنوان على اليمين والقيمة على اليسار */
+        display: flex; 
+        justify-content: space-between; 
         align-items: center;
-        text-align: left; /* <<-- جعل النص على اليسار */
+        text-align: left; 
     }
 
-    /* الجزء السحري: إضافة العناوين قبل كل قيمة */
     .cart-items td::before {
-        content: attr(data-label); /* <<-- جلب النص من data-label */
+        content: attr(data-label); 
         font-weight: 700;
         color: var(--secondary-color);
-        text-align: right; /* <<-- جعل العنوان على اليمين */
+        text-align: right; 
         padding-left: 1rem;
     }
 
-    /* تنسيقات خاصة لخلايا معينة */
     .product-image-cell {
-        justify-content: center; /* توسيط الصورة */
+        justify-content: center; 
         margin-bottom: 1rem;
     }
     
-    /* جعل اسم المنتج وزر الإزالة تحت بعضهما */
     .product-name-cell {
         flex-direction: column;
         align-items: flex-start;
@@ -1164,10 +1145,10 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: 1rem;
     }
     .product-name-cell::before {
-        display: none; /* لا نحتاج عنوان لكلمة "المنتج" */
+        display: none; 
     }
     
     .quantity-selector-cart {
-        margin: 0; /* إزالة أي هوامش قديمة */
+        margin: 0; 
     }
 }
