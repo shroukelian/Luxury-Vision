@@ -1,5 +1,4 @@
-// ======================= Mock Data (بيانات وهمية) =======================
-// لاحقًا، هذه البيانات ستأتي من الباك إند (API)
+// ======================= Mock Data  =======================
 const products = [
     {
         id: 1,
@@ -50,7 +49,7 @@ const products = [
 
 function displayProducts(productsList) {
     const productsGrid = document.getElementById('products-grid');
-    if (!productsGrid) return; // إذا لم يجد العنصر، يتوقف هنا بأمان
+    if (!productsGrid) return; 
 
     let productsHTML = '';
     productsList.forEach(product => {
