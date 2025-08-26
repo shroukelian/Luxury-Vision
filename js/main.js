@@ -6,14 +6,14 @@ const products = [
         name: 'سرير كلاسيكي فاخر',
         price: 3200,
         category: 'سرير',
-        image: 'https://images.unsplash.com/photo-1565509623-e19c4b7263fb?q=80&w=1964&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop'
     },
     {
         id: 2,
         name: 'دولاب زاوية ذكي',
         price: 5500,
         category: 'دولاب',
-        image: 'https://images.unsplash.com/photo-1618221085122-304e2d31c6d3?q=80&w=1974&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop'
     },
     {
         id: 3,
@@ -27,21 +27,21 @@ const products = [
         name: 'تسريحة عصرية بمرآة LED',
         price: 1800,
         category: 'تسريحة',
-        image: 'https://images.unsplash.com/photo-1598701258731-3c525141f2a3?q=80&w=2070&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop'
     },
     {
         id: 5,
         name: 'سرير مودرن مع تخزين',
         price: 4100,
         category: 'سرير',
-        image: 'https://images.unsplash.com/photo-1594454823103-382a39205f93?q=80&w=1974&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop'
     },
     {
         id: 6,
         name: 'غرفة نوم أطفال',
         price: 7500,
         category: 'غرف نوم',
-        image: 'https://images.unsplash.com/photo-1593085512500-21a49240a2d6?q=80&w=1974&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop'
     }
 ];
 
